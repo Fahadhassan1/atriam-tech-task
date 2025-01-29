@@ -15,8 +15,8 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/Fahadhassan1/glassdoor-tech-task.git
-    cd glassdoor-tech-task
+    git clone https://github.com/Fahadhassan1/atriam-tech-task.git
+    cd url-shortener-task
     ```
 
 2. **Install dependencies:**
@@ -38,24 +38,28 @@ To get started with this project, follow these steps:
     php artisan migrate
     ```
 
-6. **Seed the database:**
-    ```bash
-    php artisan db:seed --class=ProductsTableSeeder
-    ```
-
-
-7. **Start the development server:**
+6. **Start the development server:**
     ```bash
     php artisan serve
     ```
 
 ## Calling API
 
-- **Get all products with filter:**
+- 1 **Enocde the Long Url to short Url:**
   ```bash
-  GET /api/products
+  POST /api/encode
 
-  http://127.0.0.1:8001/api/products?category=electronics&sort=asc&search=phone&page=1
+  http://127.0.0.1:8001/api/encode
+
+  pass this paramter in body via postman
+  url="https://www.thisisalongdomain.com/with/some/parameters?and=here_to1"
+  ```
+
+- 2 **Decode the Short Url to Long Originial Url:**
+  ```bash
+  GET /api/decode/{code}
+
+  http://127.0.0.1:8001/api/decode/StokqK
   ```
 
 ## Running Tests
